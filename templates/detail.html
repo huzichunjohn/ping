@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}detail{% endblock %}
+{% block content %}
+<table>
+<thead>
+<tr>
+    <td>ip</td>
+    <td>loss</td>
+    <td>latency</td>
+</tr>
+<thead>
+<tbody>
+{% for ping in pings %}
+<tr>
+    <td>{{ ping.ip }}</td>
+    <td>{{ ping.loss }}</td>
+    <td>{{ ping.latency }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
